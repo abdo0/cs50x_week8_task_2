@@ -108,7 +108,7 @@ text-align: center;
     
     flex-direction: column;
     
-   background: url(/baghdad.html/travel.html/lalo-hernandez-Amo081zdJsI-unsplash.png);
+   background-image: url(/task_2/cs50x_week8_task_2/pictures/lalo-hernandez-Amo081zdJsI-unsplash.png);
   
    background-size: cover;
    width:100%;
@@ -254,7 +254,7 @@ font-size: 3rem;
     color:#f7f9fe;
 }
 .blog1{
-    background-image: url(/baghdad.html/travel.html/NoPath.png);
+    background-image: url(../cs50x_week8_task_2/pictures/NoPath.png);
     
     background-size: cover;
     width:50%;
@@ -272,7 +272,7 @@ font-size: 3rem;
     
 } 
 .sub-blog2{
-    background-image: url(/baghdad.html/travel.html/eva-darron-oCdVtGFeDC0-unsplash.png);
+    background-image: url(../cs50x_week8_task_2/pictures/eva-darron-oCdVtGFeDC0-unsplash.png);
     background-size: cover;
     width:100%;
     margin-left:1%;
@@ -282,7 +282,7 @@ font-size: 3rem;
    text-align: center;
 }
 .blog3{
-    background-image: url(/baghdad.html/travel.html/ibrahim-rifath-Y6tBl0pTe-g-unsplash.png);
+    background-image: url(../cs50x_week8_task_2/pictures/ibrahim-rifath-Y6tBl0pTe-g-unsplash.png);
      background-size: cover;
      width:101%;
      margin-left:1%;
