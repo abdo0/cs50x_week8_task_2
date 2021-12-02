@@ -1,1 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Roboto:wght@400;700;900&display=swap');
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box ;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+}
+.header{
+display: flex;
+justify-content:space-between;
+align-items: center;
+width: 100%;
+top: 0;
+left: 0;
+right: 0;
+position: fixed;
+padding: 2rem 7%;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+z-index: 1000000;
+background-color: white;
+}
+.header #logo{
+    color: #4468E2;
+    font-size: 1.9rem;
+    letter-spacing: 0px;
+    font-weight: bold;
+    margin-right: 200px;
+}
+.cont #cnt{
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    background: #4468E2;
+    padding: 7px;
+    border-radius: 20px;
+}
+.cont #cnt:hover{
+     transform: scaleY(1.1);
+    letter-spacing: 2px;
+    border-radius: 15px;
+}
+.icons-header{
+    display: flex;
+    position: absolute;
+    left:75px
+    
+}
+
+.navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    padding: 2rem;
+    color:#707070;
+}
+.navbar a:hover{
+    color:#1C4961;
+}
+/* .icons #menu-bars{
+    font-size: 2rem;
+    color: black;
+    display: none;
+}
+.icons #menu-bars:hover{
+    color: cornflowerblue;
+} */
+/* .connect{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+
+ } */
+.background-image{
+    background: url(lalo-hernandez-Amo081zdJsI-unsplash.png);
+    background-size:1450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 200vh; */
+    height: 60vh;
+    border-radius:70px;
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-image {
+    display: flex;
+    flex-direction: column;
+    opacity: 10;
+}
+.background-image h1{
+    font-size: 50px;
+    color: white;
+}
+/* .background-image h1 span{
+    color: #1C4961;
+} */
+.background-image p{
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    bottom:#707070 ;
+    
+    
+}
+.background-image a{
+    padding: 1.3rem;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    background: #4468E2;
+    border-radius: 10px;
+}
+ 
+.background-image a:hover{
+    transform: scaleY(1.1);
+    letter-spacing: 2px;
+    border-radius: 15px;
+
+}
+
+.our-services{
+    padding:2rem 7% ;
+}
+.our-services h1{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.our-services h1 span{
+    color: cornflowerblue;
+}
+.main-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+   
+}
+.main-services .inner-service{
+   flex: 1 1 1 200px; 
+   padding: 2rem 1rem;
+   text-align: center;
+}
+.inner-icons img{
+    width: 50px;
+    padding: 1.rem;
+
+}
+.inner-service h2{
+    font-size: 1.7rem;
+    color: black;
+    padding: .5rem;
+}
+
+.inner-service p{
+  color: rgb(24, 25, 26);
+  font-size: 1.5rem;
+  padding: 0;  
+  text-align: left;
+}
+.recommended-destination{
+   padding: 3rem 7%; 
+}
+.recommended-destination h1{
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+.recommended-destination h1 span{
+    color: cornflowerblue;
+}
+
+.recommended-destination h1 span:hover{
+  letter-spacing: 4px;  
+}
+.main-destination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:15px;
+}
+.main-destination .inner-destination{
+flex: 400px;
+}
+.main-destination .inner-destination .main-image img{
+ width:100% ;   
+}
+.inner-destination h2{
+ font-size: 2rem;  
+ padding: 1rem 0; 
+}
+.inner-destination p{
+    font-size: 1.5rem;
+}
+.dist-icons{
+   margin-left: 1rem ; 
+}
+
+.our-blog{
+ padding:3rem 7% ;   
+}
+.our-blog h1{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    padding:1.5rem 0 ;
+}
+/* .our-blog h1 span:hover{
+    letter-spacing: 3px;
+} */
+.main-blog{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* flex-wrap: wrap; */
+}
+
+.inner-blog img{
+    width: 100%;
+}
+.blog-images img{
+height: 189px;
+}
+.reviews{
+  padding: 3rem 7%;  
+}
+.reviews h1{
+    color:black ;
+    text-align: center;
+    font-size: 30px;
+    padding:1.5rem 0 ;
+    margin: 5rem;
+}
+/* .reviews h1 span{
+    color: cornflowerblue;
+} */
+.main-review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+.inner-review{
+flex: 1 1 45rem;
+padding: 2rem 4rem;
+box-shadow: rgba(0, 0, 0, 0.24) 8px 3px 8px;
+}
+.inner-review p{
+    font-size: 1.5rem;
+}
+.review-client{
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+.review-client span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+    color: black;
+}
+.review-client p{
+    font-size: 1.5rem;
+    margin-top: 70px;
+    margin-left: 90px;
+    color: #848484;
+    position:absolute;
+}
+.footer{
+    box-decoration-break: clone;
+}
+.inner-footer{
+    margin: 0;
+    padding: 0;
+    background-color:#E1E8F8;
+ }
+.social-links{
+    display: flex;
+}
+.social-links ul{ 
+display: flex;
+} */
+/* .social-items a{
+   padding: 10px 20px;
+   font-size: 35px;
+   color: blueviolet;
+} */
+.quick-links{
+    display: flex;
+}
+/* .quick-items a{
+text-decoration: none;
+padding: 0px 15px;
+font-size: 18px;
+font-size: 2rem;
+margin-left: 2rem;
+padding: 2rem;
+color:black ;
+} */
+.na a{
+    font-size: 2rem;
+    margin-left: 5rem;
+    padding: 2rem;
+    color:black;   
+}
+.outer-footer{
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
+
+
+
+
+@media (max-width:768px) {
+   html{
+       font-size: 55%;
+   } 
+   .icons #menu-bars{
+    display:initial;
+}
+.header{
+    padding:2rem ;
+}
+.navbar{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+}
+
+.navbar a{
+    display:block ;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+}
