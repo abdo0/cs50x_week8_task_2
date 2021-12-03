@@ -1,1 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* To ignore increasing width of page when using margin or padding thast taking from the origenal size of page*/
+}
 
+.container{
+    width: 90%;
+    padding: 0;
+    margin: auto;
+}
+body{
+    font-family: 'Vollkorn', serif;
+}
+
+.header_content{
+    overflow: hidden;    /* To solve the float problem that make the parent clases feel son  */ 
+}
+
+
+.header .logo{
+    width: 30%;
+    float: left;
+    margin-top: 15px;
+}
+.header .logo .p{
+    display: inline-block;
+    padding-left: 5px;
+  
+}
+
+.header .nav{
+
+    float: left;             
+    list-style: none;        /* Remove the points from li */   
+}
+
+.header .nav li{
+    display: inline-block;   /* to arrange the list in line  */   
+    text-align: right; 
+}
+
+.header .nav li a{
+    color: #58555A;
+    font-size: 15px;
+    text-decoration: none;  /* remove underline  */ 
+    display: block;
+    padding: 18px;
+    margin: 0 5px; 
+    
+}
+.header .nav li a.active:after,         /* grouping  */ 
+.header .nav li a:after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color:#6195ff ;
+    transition: width 0.5s;
+    
+}
+.header .nav li a.active:after{
+    width: 100%;
+}
+
+.header .nav li a:after{
+    width: 0;
+}
+
+.header .nav li a:hover::after{
+    width: 100%;
+}
+
+
+/* Main */
+.home{     
+    background-image: url(images/lalo-hernandez-Amo081zdJsI-unsplash.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    background-size: 100%;
+    border-radius: 30px;
+    border: 0;
+    position: relative;         /* parent under the color of overlay */
+  
+    
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: 100%;
+
+}
+
+.home_content{
+    position:absolute;
+    width: 35%;
+    top: 50%;                         /* center text inside the photo */
+    left: 50%;                        /* center text inside the photo */
+    transform: translate(-50%,-50%);  /* center text inside the photo */
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+
+.home .travel{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+.home .text{
+    margin: 10px 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.home .btn{
+    width: 150px;
+    padding: 15px 0;
+    border-radius: 10px;
+    border:0;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: #6195ff;
+    color: white;
+    cursor: pointer;
+}
+.opacity_hover{
+    transition: opacity 0.5s;        /* opacity after 0.5 secend */          
+}
+
+
+.opacity_hover:hover{
+    opacity: 0.8;                    /* opacity*/
+}
+
+.left_effect{
+    position: relative;
+}
+
+.left_effect::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(99, 99, 99);
+    z-index: -1;
+    transition: width 0.5s;
+
+}
+
+.left_effect:hover::after{
+    width: 100%;
+}
+
+.get_price{
+    transition: color 0.5s;
+}
+
+.price:hover .get_price{
+    color: #fff;
+}
+.icon{
+    overflow: hidden;
+}
+
+.price{
+    width: 20%;
+    float: left;
+    border-radius: 5px;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    box-shadow: 1px 1px 1px 1px #888;
+  
+}
+
+
+.price img{
+    padding-bottom: 12px;    
+}
+
+.price.mg{
+    margin: 0 6%;
+}
+
+.price.mg_2{
+    margin-right: 6%;
+    padding-bottom: 18px;
+}
+.price.mg_2 img{
+    padding-bottom: 35px;
+}
+.pd-y{
+    padding: 120px 0;
+}
+
+.des{
+    text-align: center;
+}
+
+.des .nav{           
+    list-style: none;        /* Remove the points from li */ 
+    margin-bottom: 10px; 
+   
+}
+
+
+.des .nav li{
+    display: inline-block;   /* to arrange the list in line  */   
+    text-align: center; 
+    
+   
+   
+}
+
+
+.des .nav li a{
+    width: 100%;
+    color: #58555A;
+    font-size: 15px;
+    text-decoration: none;  /* remove underline  */ 
+    display: block;
+    padding: 20px;
+    margin-top: 10px;
+    
+}
+
+.des .nav li a.active:after,         /* grouping  */ 
+.des .nav li a:after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color:#58555A ;
+    transition: width 0.5s;
+   
+    
+}
+
+.des .nav li a.active:after{
+    width: 100%;
+}
+
+.des .nav li a:after{
+    width: 0;
+}
+
+.des .nav li a:hover::after{
+    width: 100%;
+}
+
+
+
+.cont{
+    display: flex;
+    justify-content: center;
+    padding: 120px 0;  
+}
+
+.cont img{
+    width: 25px;
+    
+}
+
+.cont p{
+    width: 25px;
+}
