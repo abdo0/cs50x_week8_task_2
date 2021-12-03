@@ -271,31 +271,33 @@
     overflow: hidden;
     margin-left: 50px; 
     margin-right: 50px;
+    border-radius: 2px;
+
 
   }
   
   .a { grid-area: a;
     box-shadow: 5px 5px 5px grey;
     
-    
+    border-radius: 6px;
     width: 20%;
      }
   
   .b { grid-area: b;
     box-shadow: 5px 5px 5px grey;
-    
+    border-radius: 6px;
     width: 20%;
      }
   
   .c { grid-area: c;
     box-shadow: 5px 5px 5px grey;
-    
+    border-radius: 6px;
     width: 20%;
      }
   
   .d { grid-area: d; 
     box-shadow: 5px 5px 5px grey;
-    
+    border-radius: 6px;
     width: 20%;
    }
   
@@ -332,7 +334,7 @@
      display: inline-block;
      text-align: center;
      padding: 45px 7%; 
-     
+          
      
    }
    .list3 li {
