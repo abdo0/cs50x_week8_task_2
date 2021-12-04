@@ -1,12 +1,628 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <title>
-            hello, Dear
-        </title>
-    </head>
-    <body>
-       هنا تكتبون الحل
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Travel Agency</title>
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <style>
+        :root {
+            --maincolor: #163235;
+            --secondclr: #4468E2;
+            --thirdcolor: #1C4961;
+        }
+
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all .2s;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            padding: 2rem 7%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            background-color: white;
+        }
+
+        .header #logo {
+
+            color: black;
+            font-size: 3rem;
+
+        }
+
+        .header #logo span {
+            color: var(--secondclr);
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            margin-left: 1rem;
+            padding: 1rem;
+            color: var(--maincolor);
+        }
+
+        .navbar a:hover {
+            color: var(--secondclr);
+        }
+
+        .navbar.active {
+            left: 0;
+        }
+
+        .icons #menu-bars {
+            font-size: 2rem;
+            color: black;
+            display: none;
+
+        }
+
+        .icons #menu-bars:hover {
+            color: #4468E2;
+        }
+
+        .background-image {
+            position: relative;
+            background: url(images/background.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            margin-top: 6%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-image {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .background-image h1 {
+            font-size: 50px;
+            color: white;
+        }
+
+        .background-image h1 span {
+            color: var(--secondclr);
+        }
+
+        .background-image p {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem 3rem;
+        }
+
+        .background-image a {
+            padding: 1.5rem 2rem;
+            color: white;
+            font-size: 1.5rem;
+            background: var(--secondclr);
+
+        }
+
+        .background-image a:hover {
+            transform: scaleY(1.1);
+            letter-spacing: 2px;
+            border-radius: 15px;
+        }
+
+
+
+        .our-services h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+
+        }
+
+        .our-services h1 span {
+            color: var(--secondclr);
+        }
+
+        .main-services {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .main-services .inner-service {
+            flex: 1 1 200px;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .inner-icons img {
+            width: 50px;
+            padding: 1.5rem 0;
+        }
+
+        .inner-service h2 {
+            font-size: 2rem;
+            color: black;
+            padding: .5rem;
+        }
+
+        .inner-service h2 span {
+            color: var(--secondclr);
+        }
+
+        .inner-service p {
+            color: var(--secondclr);
+            font-size: 1.5rem;
+            padding: 0;
+            text-align: left;
+        }
+
+        .recomended-destination {
+            padding: 3rem 7%;
+            border-bottom: lightcoral;
+        }
+
+        .recomended-destination h1 {
+            font-size: 40px;
+            text-align: center;
+            color: black;
+            padding: 1rem 0;
+        }
+
+
+
+
+        .main-destination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .main-destination .inner-destination {
+            flex: 280px;
+        }
+
+        .main-destination .inner-destination .main-image img {
+            width: 100%;
+        }
+
+        .inner-destination h2 {
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+
+        .inner-destination p {
+            font-size: 1.5rem;
+        }
+
+        .dist-icons {
+            margin-left: 1rem;
+        }
+
+        .our-blog {
+            padding: 3rem 7%;
+        }
+
+        .our-blog h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        .our-blog h1 span {
+            color: var(--secondclr);
+        }
+
+        .our-blog h1 span:hover {
+            letter-spacing: 3px;
+        }
+
+        .mian-blog {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .inner-blog {
+            flex: 1 1 45rem;
+        }
+
+        .inner-blog img {
+            width: 100%;
+
+        }
+
+        .blog-images img {
+            height: 175px;
+        }
+
+        .reviews {
+            padding: 3rem 7%;
+        }
+
+        .block {
+            grid-area: a;
+            box-shadow: 5px 5px 5px grey;
+            color: black;
+            border-radius: 6px;
+            width: 20%;
+        }
+
+        .reviews h1 {
+            color: black;
+            text-align: center;
+            font-size: 40px;
+            padding: 1.5rem 0;
+        }
+
+        .reviews h1 span {
+            color: var(--secondclr);
+        }
+
+        .mian-review {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .inner-review {
+            flex: 1 1 45rem;
+            padding: 2rem 4rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .inner-review p {
+            font-size: 1.5rem;
+        }
+
+        .review-client {
+            display: flex;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .review-client span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 20px;
+            color: var(--secondclr);
+        }
+
+
+        @media (max-width:768px) {
+            html {
+                font-size: 55%;
+            }
+
+            .icons #menu-bars {
+                display: initial;
+
+            }
+
+            .header {
+                padding: 2rem;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 100%;
+                right: 0;
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 1.5rem;
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="images/globe@1X.png" id="logo">
+
+        <nav class="navbar">
+            <a href="#">home</a>
+            <a href="#">travel</a>
+            <a href="#">agency</a>
+            <a href="#">gallery</a>
+            <a href="#">blog</a>
+            <a href="#">contact</a>
+        </nav>
+        <div class="icons">
+            <a href="#" id="menu-bars" class="fas fa-bars"></a>
+        </div>
+
+    </header>
+
+
+
+    <div class="background-image">
+        <h1>travel to explore</h1>
+        <p>Explore new landmarks and breathtaking nature life with our global company</p>
+        <br>
+        <a href="#">read more</a>
+    </div>
+
+
+
+    <div class="our-services">
+        <div class="main-services">
+            <div class="inner-service">
+                <div class="inner-icons">
+                    <img src="images/service1.png">
+                </div>
+                <h2>Get best prices</h2>
+                <p> Pay through our application and get rewards</p>
+
+            </div>
+
+            <div class="inner-service">
+                <div class="inner-icons">
+                    <img src="images/service2.png">
+                </div>
+
+                <h2>Great protection from COVID-19</h2>
+
+                <p>High protection against corona virus</p>
+
+            </div>
+
+            <div class="inner-service">
+                <div class="inner-icons">
+                    <img src="images/service3.png">
+                </div>
+
+                <h2>credit cards</h2>
+                <p>Electronic payment can be used
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    <div class="recomended-destination">
+        <h1>Recomended Destination</h1>
+        <hr>
+        <hr><br>
+
+        <div class="main-destination">
+            <div class="inner-destination">
+                <div class="main-image">
+                    <img src="images/london2.png">
+                </div>
+
+                <h2>Singapore</h2>
+                <p>It is a republic located on an island in Southeast Asia, at the southern tip of the Malay Peninsula
+                    Singapore is the fourth most important financial center in the world.</p>
+                <div class="dist-icons">
+                    <img src="images/icon1.png">
+                    <img src="images/icon2.png">
+                    <img src="images/icon3.png">
+                </div>
+            </div>
+
+            <div class="inner-destination">
+                <div class="main-image">
+                    <img src="images/Thailand.png">
+                </div>
+                <h2>Thailand</h2>
+                <p>It is a country located in Southeast Asia on the Indochinese Peninsula.</p>
+                <div class="dist-icons">
+                    <img src="images/icon1.png">
+                    <img src="images/icon2.png">
+                    <img src="images/icon3.png">
+                </div>
+            </div>
+
+            <div class="inner-destination">
+                <div class="main-image">
+                    <img src="images/Paris.png">
+                </div>
+                <h2>Paris</h2>
+                <p>It is the capital and largest city of France in terms of population. It is located on the banks of
+                    the Seine in the northern part of the country in the heart of the Ile-de-France region.</p>
+                <div class="dist-icons">
+                    <img src="images/icon1.png">
+                    <img src="images/icon2.png">
+                    <img src="images/icon3.png">
+                </div>
+            </div>
+
+            <div class="inner-destination">
+                <div class="main-image">
+                    <img src="images/New Zealand.png" alt="">
+                </div>
+                <h2>New Zealand</h2>
+                <p>It is an island country located in the southwest Pacific Ocean and consists of two main islands
+                    (North Island and South Island).</p>
+                <div class="dist-icons">
+                    <img src="images/icon1.png" alt="">
+                    <img src="images/icon2.png" alt="">
+                    <img src="images/icon3.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="inner-destination">
+                <div class="main-image">
+                    <img src="images/Bora Bora.png" alt="">
+                </div>
+                <h2>Bora Bora</h2>
+                <p>It is an island in the Leeward Islands, which forms part of the Society archipelago in French
+                    Polynesia, belonging to France in the Pacific Ocean.</p>
+                <div class="dist-icons">
+                    <img src="images/icon1.png" alt="">
+                    <img src="images/icon2.png" alt="">
+                    <img src="images/icon3.png" alt="">
+                </div>
+            </div>
+
+            <div class="inner-destination">
+                <div class="main-image">
+                    <img src="images/London .png" alt="">
+                </div>
+                <h2>London</h2>
+                <p>It is the capital and largest city of the United Kingdom. Located on the River Thames in southern
+                    England.</p>
+                <div class="dist-icons">
+                    <img src="images/icon1.png" alt="">
+                    <img src="images/icon2.png" alt="">
+                    <img src="images/icon3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-blog">
+        <h1>blogs</h1><br><br>
+
+        <div class="mian-blog">
+
+            <div class="inner-blog">
+
+                <img src="images/blog1.png">
+
+            </div>
+
+
+
+
+            <div class="inner-blog blog-images">
+                <img src="images/blog2.png" alt="">
+                <img src="images/blog3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+        <h1>happy customers</h1>
+        <div class="mian-review">
+            <div class="inner-review">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus perferendis hic
+                    dignissimos soluta inventore quisquam velit commodi ad debitis pariatur laudantium totam explicabo,
+                    vitae ipsum sit saepe? Veritatis, facere?</p>
+
+
+                <div class="review-client">
+                    <img src="images/review.png" alt="">
+                    <span>Karla</span>
+                </div>
+            </div>
+
+
+            <div class="inner-review">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus perferendis hic
+                    dignissimos soluta inventore quisquam velit commodi ad debitis pariatur laudantium totam explicabo,
+                    vitae ipsum sit saepe? Veritatis, facere?</p>
+
+                <div class="review-client">
+                    <img src="images/review.png" alt="">
+                    <span>Sara</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">
+
+
+
+        <ul class="list-inline" style="text-align: center;">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Places</a></li>
+            <li class="list-inline-item"><a href="#">Careers</a></li>
+            <li class="list-inline-item"><a href="#"> Blog</a></li>
+        </ul>
+        
+        <div class="block">
+            <div class="icons1">
+                <img src="images/facebook@1X.png" alt="facebook" style="height: 20px; width: 20px;"></a>
+
+                <img src="https://i.ibb.co/0sqkKNc/instagram.png" alt="instagram"
+                    style="height: 20px; width: 20px;"></a>
+
+                <img src="https://i.ibb.co/hVW6TNn/linkedin.png" alt="linkedin" style="height: 20px; width: 20px;"></a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
 </html>
