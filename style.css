@@ -1,1 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Nunito&family=Raleway:wght@200;300&family=Shippori+Antique&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Shippori Antique', sans-serif;
+  }
+
+  
+  nav{
+  background-color: white;
+  overflow: hidden;
+  margin: 0px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  float: right;
+  background-color: #4468e2;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 6px 32px;
+  text-decoration: none;
+  margin: -26px 40px 0px 0px;
+  cursor: pointer;
+}
+
+nav  ul {
+  list-style-type: none;
+  padding-top: 15px;
+}
+
+nav li {
+  display: inline;
+}
+
+li a {
+  color: #2fbfc1;
+  text-decoration: none;
+  size: 30px;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 20px 15px 0px;
+}
+
+#LeftUl {
+  color: #2fbfc1;
+  text-decoration: none;
+  padding: 15px 20px 20px 0px;
+  margin-right: 350px;
+  float: left;
+}
+
+#LeftUl-img {
+  float: left;
+  margin: 13px 0px 0px 60px;
+}
+
+li a:hover {
+  color: #4468e2;
+}
+
+.MainImg{
+  margin: 10px 20px 0px 58px;
+  object-fit: scale-down;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -400%);
+}
+
+
+
+.Maitext{
+  font-size: 50px;
+  color: white;
+  font-style: bold;
+}
+
 
