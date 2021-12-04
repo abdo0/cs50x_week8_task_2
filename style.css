@@ -260,17 +260,152 @@ body{
 
 
 
-.cont{
+.cont-content{
     display: flex;
     justify-content: center;
-    padding: 120px 0;  
-}
-
-.cont img{
-    width: 25px;
+    padding-top: 120px;  
     
 }
 
-.cont p{
-    width: 25px;
+.cont img{
+    width: 100%;
+}
+
+.Thailand img{
+    height: 79%;
+}
+
+.sing{
+    padding:10px 0;
+}
+
+.photo_title{
+    height: 60px;
+    width: 60px;
+    display: inline;
+    padding-bottom: 120px;
+    
+}
+
+.photo_title .prices{
+    padding-left: 260px;
+    padding-right: 60px;
+}
+
+.photo_title .prices_2{
+    padding-left: 200px;
+    padding-right: 30px;
+}
+.photo_title .prices_3{
+    padding-left: 250px;
+    padding-right: 15px;
+}
+
+.blog{
+    padding-top: 120px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: large;
+}
+
+
+.blog_content{
+    overflow: hidden;
+    padding-bottom: 120px;
+}
+
+.blog_photo{
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+.blog_photo img{
+    width: 100%;
+}
+
+.top{
+    height: 24.5vh;
+}
+
+.blog_photo .layer_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98.5%;
+    height: 96%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding-left: 15px ;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.blog_photo:hover .layer_content{
+    opacity: 1;
+    visibility: visible;
+}
+
+.blog_photo .layer_info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+}
+
+.layer_content .guide{
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+
+}
+
+
+.footer .footer_nav li a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;  /* remove underline  */ 
+    display: block;
+    padding: 0 18px;
+    margin: 0 5px; 
+    
+}     
+
+.footer .footer_nav li a:after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color:black ;
+    transition: width 0.5s;
+    
+}
+.footer .footer_nav li a:after{
+    width: 0;
+}
+
+.footer .footer_nav li a:hover::after{
+    width: 100%;
+}
+
+.footer{
+    background-color: #888;
+    padding:15px;
+    margin: 15px;
+    color: #fff;
+    border-radius: 30px;
 }
